@@ -5,7 +5,14 @@
 
 
 def palindrome?(str)
-  # YOUR CODE HERE
+
+  str = str.gsub( /[\W_0-9]/, "" )
+  
+  if 0 == str.casecmp( str.reverse )
+    true
+  else
+    false
+  end
 end
 
 def count_words(str)
