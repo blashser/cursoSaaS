@@ -2,7 +2,12 @@ class WrongNumberOfPlayersError < StandardError ; end
 class NoSuchStrategyError < StandardError ; end
 
 def rps_result(m1, m2)
-  # YOUR CODE HERE
+  fight = m1[ 1 ].downcase + m2[ 1 ].downcase
+  if fight.match /(ps|rp|sr)/
+    m1[0]
+  else
+    m2[0]
+  end
 end
 
 def rps_game_winner(game)
