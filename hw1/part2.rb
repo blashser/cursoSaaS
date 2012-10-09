@@ -13,8 +13,6 @@ end
 def rps_game_winner(game)
   raise WrongNumberOfPlayersError unless game.length == 2
   game.each do |player,strategy|
-    puts player
-    puts strategy
     raise NoSuchStrategyError unless strategy.downcase.match /^[rps]$/
   end
   
