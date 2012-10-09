@@ -40,7 +40,15 @@ if __FILE__ == $0
                 ],
                 [
                  [ ["Allen", "S"], ["Omer", "P"] ],
-                 [ ["David E.", "R"], ["Richard X.", "P"] ]
+                 [ ["David E.", "R"], ["Richard X.", "P"] ],
+                ],
+                [
+                 [ ["Sergio", "R"], ["Patricia", "P"] ],
+                 [ ["Chus", "S"], ["Chema", "P"] ],
+                ],
+                [
+                 [ ["Vane", "S"], ["Dani", "P"] ],
+                 [ ["Pedro", "P"], ["Paula", "P"] ]
                 ]
                ]
   rps_tournament_winner tournament
