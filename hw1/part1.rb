@@ -98,7 +98,16 @@ test_string.each do |str|
 end
 
 
-test_str = "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday"
+test_str = [ "The rent is due on the first day of the month unless the first day of the month falls on a Saturday or Sunday",
+             "I'm Sergio. I'm doing homework!Do   you not believe me?",
+             "This is to test the middle-line. I'm testing if middle-line is taken as one unique word." ]
 
-word_count = count_words test_str
-puts word_count
+test_str.each do |test_st|
+  word_count = count_words test_st
+  puts word_count
+  word_count.keys.each do |key|
+    print key + " => " + word_count[ key ].to_s + ", "
+  end
+  print "\n"
+end
+
