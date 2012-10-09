@@ -31,9 +31,9 @@ end
 if __FILE__ == $0
   list = [ ["Armando", "R"], ["Dave", "R"] ] # Dave would win since S > P
 
-  winer = rps_game_winner list
+  winner = rps_game_winner list
   
-  puts winer + " wins!"
+  puts winner + " wins!"
 
   tournament = [
                 [
