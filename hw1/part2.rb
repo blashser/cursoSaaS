@@ -20,7 +20,15 @@ def rps_game_winner(game)
 end
 
 def rps_tournament_winner(tournament)
-  # YOUR CODE HERE
+  tournament.each do |player1,strategy1,player2,strategy2|
+    #puts "Player1 : " + player1 + " Strategy1 : " + strategy1
+    #puts "Player2 : " + player2 + " Strategy2 : " + strategy2
+    player1.each do |i|
+      i.each do |flipa|
+        puts "que pasa? " + flipa
+      end
+    end
+  end
 end
 
 
