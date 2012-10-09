@@ -11,7 +11,14 @@ def rps_result(m1, m2)
 end
 
 def rps_game_winner(game)
-  # YOUR CODE HERE
+  raise WrongNumberOfPlayersError unless game.length == 2
+  game.each do |player,strategy|
+    puts player
+    puts strategy
+    raise NoSuchStrategyError unless strategy.downcase.match /^[rps]$/
+  end
+  
+  rps_result ( game[ 0 ], game[ 1 ] )
 end
 
 def rps_tournament_winner(tournament)
