@@ -7,13 +7,12 @@ def combine_anagrams(words)
     group = []
     unless group_anagrams.flatten.include? anag1
       words_to_test.each do |test|
-        puts "Comparing " + anag1 + " and " + test
         if anag1.downcase.split(//).sort.join == test.downcase.split(//).sort.join
           puts anag1 + " and " + test + " are anagrams or equals."
           group << test 
         end
       end
-      puts group_anagrams.flatten.inspect
+      puts group_anagrams.inspect
       puts group.flatten.at( 0 )
 
       group_anagrams << group unless group.empty?
