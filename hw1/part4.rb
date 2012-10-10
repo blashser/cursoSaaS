@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 class Dessert
   def initialize(name, calories)
-    print "creando dessert..."
     @name     = String.new name
     @calories = calories
-    puts "...dessert creado"
   end
 
   attr_accessor :name, :calories
@@ -14,23 +12,19 @@ class Dessert
   end
   
   def delicious?
-    print "testing delicious in dessert"
     true
   end
 end
 
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
-    print "creando jellybean..."
     super name, calories
     @flavor = String.new flavor
-    puts "...jellybean creado"
   end
   
   attr_accessor :flavor
 
   def delicious?
-    print "testing delicious in JELLYBEAN"
     true unless "black licorice" == flavor
   end
 end
