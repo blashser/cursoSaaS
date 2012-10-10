@@ -41,26 +41,22 @@ end
 
 if __FILE__ == $0
 
-  yogurt = Dessert.new  180,"Plátano"
-  pastel = Dessert.new "Pastel de Queso", 400
+  yogurt = Dessert.new  "Plátano", 180
+  pastel = Dessert.new  "Pastel de Queso", 400
 
   jellybn = JellyBean.new "caramelo", 300, "black licorice"
   nojellb = JellyBean.new "pera", 100, "fruta"
 
-  print "jellybn"
-  if jellybn.delicious? 
-    puts " is delicious!"
-  else
-    puts " is NOT delicious!"
+  puts
+  [ yogurt, pastel, jellybn, nojellb ].each do |dess|
+    puts dess.name
+    puts dess.calories
+    if dess.healthy? 
+      puts " is healthy!" 
+    end
+    puts " and is DELICIOUS" if dess.delicious?
+    puts
   end
-
-  print "nojellybn"
-  if nojellb.delicious? 
-    puts " is delicious!"
-  else
-    puts " is NOT delicious!"
-  end
-
 end
 
 
