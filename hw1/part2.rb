@@ -37,6 +37,7 @@ def rps_tournament_winner( tournament )
 
     puts tournament.inspect
   end
+  tournament
 end
 
 
@@ -67,5 +68,8 @@ if __FILE__ == $0
                  [ ["Pedro", "P"], ["Paula", "P"] ]
                 ]
                ]
-  rps_tournament_winner tournament
+  winner = rps_tournament_winner tournament
+
+  puts winner.inspect
+  puts winner.first + " wins the Tournament!"
 end
