@@ -22,13 +22,3 @@ def combine_anagrams(words)
   group_anagrams
 end
 
-#---------test part--------#
-
-if __FILE__ == $0
-
-    string_with_anagrams = ['Cars', 'FOR', 'potatoes', 'racs', 'four','scar', 'Creams', 'screaM' , 'toy' ]
-
-    anagrams_in_group = combine_anagrams string_with_anagrams
-    
-    puts anagrams_in_group.inspect
-end
