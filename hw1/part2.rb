@@ -16,18 +16,26 @@ def rps_game_winner(game)
     raise NoSuchStrategyError unless strategy.downcase.match /^[rps]$/
   end
   
-  rps_result ( game[ 0 ], game[ 1 ] )
+  rps_result game[ 0 ], game[ 1 ]
 end
 
-def rps_tournament_winner(tournament)
-  tournament.each do |player1,strategy1,player2,strategy2|
-    #puts "Player1 : " + player1 + " Strategy1 : " + strategy1
-    #puts "Player2 : " + player2 + " Strategy2 : " + strategy2
-    player1.each do |i|
-      i.each do |flipa|
-        puts "que pasa? " + flipa
-      end
-    end
+def rps_tournament_winner( tournament )
+
+  puts tournament.flatten!.inspect
+
+  while tournament.length > 2 do
+
+    player1   = tournament.shift
+    strategy1 = tournament.shift
+    player2   = tournament.shift
+    strategy2 = tournament.shift
+    
+    player1 = [ player1, strategy1 ]
+    player2 = [ player2, strategy2 ]
+    
+    tournament += rps_game_winner( [ player1, player2 ] )
+
+    puts tournament.inspect
   end
 end
 
