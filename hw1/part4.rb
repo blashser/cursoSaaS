@@ -2,7 +2,7 @@
 class Dessert
   def initialize(name, calories)
     print "creando dessert..."
-    @name     = name
+    @name     = String.new name
     @calories = calories
     puts "...dessert creado"
   end
@@ -23,7 +23,7 @@ class JellyBean < Dessert
   def initialize(name, calories, flavor)
     print "creando jellybean..."
     super name, calories
-    @flavor   = flavor
+    @flavor = String.new flavor
     puts "...jellybean creado"
   end
   
