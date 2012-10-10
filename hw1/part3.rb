@@ -11,8 +11,6 @@ def combine_anagrams(words)
         if anag1.downcase.split(//).sort.join == test.downcase.split(//).sort.join
           puts anag1 + " and " + test + " are anagrams or equals."
           group << test 
-        else
-          # puts anag1 + " and " + test + " are NOTHING."
         end
       end
       puts group_anagrams.flatten.inspect
