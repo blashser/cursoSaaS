@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Dessert
   def initialize(name, calories)
     @name     = name
@@ -24,3 +25,14 @@ class JellyBean < Dessert
     # YOUR CODE HERE
   end
 end
+
+#---------------test---------------#
+
+if __FILE__ == $0
+
+  yogurt = Dessert.new "Plátano", 180
+  pastel = Dessert.new "Pastel de Queso", 400
+
+end
+
+
