@@ -38,36 +38,3 @@ def rps_tournament_winner( tournament )
   tournament
 end
 
-
-### Test part ###
-
-if __FILE__ == $0
-  list = [ ["Armando", "P"], ["Dave", "S"] ] # Dave would win since S > P
-
-  winner = rps_game_winner list
-  
-  puts winner.first + " wins!"
-
-  tournament = [
-                [
-                 [ ["Armando", "P"], ["Dave", "S"] ],
-                 [ ["Richard", "R"],  ["Michael", "S"] ],
-                ],
-                [
-                 [ ["Allen", "S"], ["Omer", "P"] ],
-                 [ ["David E.", "R"], ["Richard X.", "P"] ],
-                ],
-                [
-                 [ ["Sergio", "R"], ["Patricia", "P"] ],
-                 [ ["Chus", "S"], ["Chema", "P"] ],
-                ],
-                [
-                 [ ["Vane", "S"], ["Dani", "P"] ],
-                 [ ["Pedro", "P"], ["Paula", "P"] ]
-                ]
-               ]
-  winner = rps_tournament_winner tournament
-
-  puts winner.inspect
-  puts winner.first + " wins the Tournament!"
-end
