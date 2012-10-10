@@ -4,9 +4,9 @@ class NoSuchStrategyError < StandardError ; end
 def rps_result(m1, m2)
   fight = m1[ 1 ].downcase + m2[ 1 ].downcase
   if fight.match /(ps|rp|sr)/
-    m1[0]
+    m2
   else
-    m2[0]
+    m1
   end
 end
 
@@ -35,11 +35,11 @@ end
 ### Test part ###
 
 if __FILE__ == $0
-  list = [ ["Armando", "R"], ["Dave", "R"] ] # Dave would win since S > P
+  list = [ ["Armando", "P"], ["Dave", "S"] ] # Dave would win since S > P
 
   winner = rps_game_winner list
   
-  puts winner + " wins!"
+  puts winner.first + " wins!"
 
   tournament = [
                 [
