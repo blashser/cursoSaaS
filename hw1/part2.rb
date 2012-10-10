@@ -21,7 +21,7 @@ end
 
 def rps_tournament_winner( tournament )
 
-  puts tournament.flatten!.inspect
+  tournament.flatten!
 
   while tournament.length > 2 do
 
@@ -34,8 +34,6 @@ def rps_tournament_winner( tournament )
     player2 = [ player2, strategy2 ]
     
     tournament += rps_game_winner( [ player1, player2 ] )
-
-    puts tournament.inspect
   end
   tournament
 end
