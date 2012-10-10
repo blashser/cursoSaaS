@@ -22,8 +22,7 @@ end
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
     print "creando jellybean..."
-    @name     = name
-    @calories = calories
+    super name, calories
     @flavor   = flavor
     puts "...jellybean creado"
   end
