@@ -8,13 +8,9 @@ def combine_anagrams(words)
 
     words_to_test.each do |test|
       if anag1.downcase.split(//).sort.join == test.downcase.split(//).sort.join
-        puts anag1 + " and " + test + " are anagrams or equals."
         group << test 
       end
     end
-    puts group_anagrams.inspect
-    puts group.flatten.at( 0 )
-
     group_anagrams << group unless group.empty?
     
     unless group.empty?
