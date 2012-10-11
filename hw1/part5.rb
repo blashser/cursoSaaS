@@ -1,24 +1,16 @@
 class Class
   def attr_accessor_with_history(attr_name)
-    attr_name  = attr_name.to_s                # make sure it's a string
-    attr_reader  attr_name.to_sym              # create the attribute's getter
-    attr_reader (attr_name+"_history").to_sym  # create bar_history getter
-#   class_eval "your code here, use %Q for multiline strings"
-    class_eval %Q{
-      def initialize
-        @#{attr_name}_history = [nil]
-      end
-      def #{attr_name}_history=( new_name )
-        puts "HOLA HOLA HOLA"
-        puts #{attr_name}_history.to_s
-      end
-    }
+    attr_name = attr_name.to_s        # make sure it's a string
+    attr_reader attr_name             # create the attribute's getter
+    attr_reader attr_name+"_history"  # create bar_history getter
     class_eval %Q{
       def #{attr_name}=( new_name )
+        unless @#{attr_name}_history
+          @#{attr_name}_history = [nil]
+        end
+
         @#{attr_name} = new_name
-        #{attr_name}_history << new_name
-        puts "#{attr_name}_history = [ " + new_name.to_s + " ]"
-        puts #{attr_name}_history.to_s
+        @#{attr_name}_history << new_name
       end
     }
   end
@@ -27,6 +19,7 @@ end
 
 class Foo
   attr_accessor_with_history :bar
+  attr_accessor_with_history :bares
 end
 
 #---------------test-------------#
@@ -42,8 +35,25 @@ if __FILE__ == $0
   puts sergio.bar_history.inspect
   sergio.bar = 10
   puts sergio.bar_history.inspect
-  
-  sergio.bar_history = 4
 
+  sergio.bares = 5
+  puts sergio.bares_history.inspect
+  sergio.bares = "mi casa"
+  puts sergio.bares_history.inspect
+  sergio.bares = [ 5, 6, 9 ]
+  puts sergio.bares_history.inspect
+  sergio.bares = 10
+  puts sergio.bares_history.inspect
+
+  sergio = Foo.new
+
+  sergio.bar = 5
   puts sergio.bar_history.inspect
+  sergio.bar = "mi casa"
+  puts sergio.bar_history.inspect
+
+  sergio.bares = 5
+  puts sergio.bares_history.inspect
+  sergio.bares = "mi casa"
+  puts sergio.bares_history.inspect
 end
