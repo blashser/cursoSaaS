@@ -22,38 +22,3 @@ class Foo
   attr_accessor_with_history :bares
 end
 
-#---------------test-------------#
-
-if __FILE__ == $0
-  sergio = Foo.new
-
-  sergio.bar = 5
-  puts sergio.bar_history.inspect
-  sergio.bar = "mi casa"
-  puts sergio.bar_history.inspect
-  sergio.bar = [ 5, 6, 9 ]
-  puts sergio.bar_history.inspect
-  sergio.bar = 10
-  puts sergio.bar_history.inspect
-
-  sergio.bares = 5
-  puts sergio.bares_history.inspect
-  sergio.bares = "mi casa"
-  puts sergio.bares_history.inspect
-  sergio.bares = [ 5, 6, 9 ]
-  puts sergio.bares_history.inspect
-  sergio.bares = 10
-  puts sergio.bares_history.inspect
-
-  sergio = Foo.new
-
-  sergio.bar = 5
-  puts sergio.bar_history.inspect
-  sergio.bar = "mi casa"
-  puts sergio.bar_history.inspect
-
-  sergio.bares = 5
-  puts sergio.bares_history.inspect
-  sergio.bares = "mi casa"
-  puts sergio.bares_history.inspect
-end
