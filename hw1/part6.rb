@@ -150,3 +150,16 @@ test_string.each do |str|
   end
 end
 
+puts
+if [ "cara", {'casa'=> 35, 'trabajo'=> 20, 'pueblo'=> "me gusta" }, 23, {'casa'=> 35, 'trabajo'=> 20, 'pueblo'=> "me gusta" }, "cara" ].palindrome?
+  puts "toma cacho palíndromo"
+else
+  puts "Eres un mierda"
+end
+
+puts
+if {'casa'=> 35, 'trabajo'=> 20, 'pueblo'=> "me gusta" }.palindrome?
+  puts "toma cacho palíndromo"
+else
+  puts "Eres un mierda"
+end
