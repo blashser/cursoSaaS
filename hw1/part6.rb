@@ -100,6 +100,9 @@ class String
   end
 end
 
+module Enumerable
+  # YOUR CODE HERE
+end
 
 
 #---------------test--------------#
@@ -145,7 +148,3 @@ test_string.each do |str|
   end
 end
 
-
-module Enumerable
-  # YOUR CODE HERE
-end
