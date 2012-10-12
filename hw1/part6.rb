@@ -146,13 +146,6 @@ test_string.each do |str|
 end
 
 
-
-if palidrome? "hola"
-  puts "PALINDROMO"
-else
-  puts "NO PALINDROMO"
-end
-
 module Enumerable
   # YOUR CODE HERE
 end
