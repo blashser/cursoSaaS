@@ -101,7 +101,9 @@ class String
 end
 
 module Enumerable
-  # YOUR CODE HERE
+  def palindrome?
+    self == self.reverse if self.respond_to? "reverse"
+  end
 end
 
 
