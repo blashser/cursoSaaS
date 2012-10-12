@@ -29,17 +29,25 @@ end
 
 #Numeric.add_currency 'dollar', 1.0
 
-20.dollars.in :yen
+print "20.dollars.in :yen "
+puts 20.dollars.in :yen
 
-1.euro.in :dollars
+print "1.dollar.in :euros "
+puts 1.dollar.in :euros
 
-5.rupee.in :euros
+print "1.euro.in :dollars "
+puts 1.euro.in :dollars
 
-15.yen.in :pesos
+print "5.rupee.in :euros "
+puts 5.rupee.in :euros
+
+print "15.yen.in :pesos "
+puts 15.yen.in :pesos
 
 Numeric.add_currency 'peso', 0.5
 
-15.yen.in :pesos
+print "15.yen.in :pesos "
+puts 15.yen.in :pesos
 
 class String
   # YOUR CODE HERE
