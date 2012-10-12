@@ -74,7 +74,7 @@ end
 
 class String
 
-  def palindrome?( str=nil )
+  def palindrome?
 
     # I do not know why this does not work
     #  str = str.gsub( /[áàäÁÀÄ]/, "a" ) #remove variations a-es
@@ -83,8 +83,7 @@ class String
     #  str = str.gsub( /[óòöÓÒÖ]/, "o" ) #remove variations o-es
     #  str = str.gsub( /[úùüÚÙÜ]/, "u" ) #remove variations u-es
 
-    str = self if str==nil
-
+    str = self
     str = variations_a_es str #remove variations a-es
     str = variations_e_es str #remove variations e-es
     str = variations_i_es str #remove variations i-es
@@ -92,7 +91,7 @@ class String
     str = variations_u_es str #remove variations u-es
 
     str = str.gsub( /[\W_0-9]/, "" )
-  
+
     if 0 == str.casecmp( str.reverse )
       true
     else
