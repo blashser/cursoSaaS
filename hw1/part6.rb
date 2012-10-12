@@ -8,6 +8,17 @@ class Numeric
       super
     end
   end
+
+  def in( arg )
+    sing_currency = arg.to_s.gsub( /s$/, '' )
+    if @@currencies.has_key? sing_currency
+      self / @@currencies[ sing_currency ]
+    else
+      puts "currency #{sing_currency} is not in the valid list"
+      puts "Please add this new currency with class method add_currency( new_coin, new_change )"
+      self
+    end
+  end
 end
 
 class String
