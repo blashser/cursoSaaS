@@ -9,6 +9,10 @@ class Numeric
     end
   end
 
+  def self.add_currency( new_coin, new_change )
+    @@currencies[ String.new new_coin ] = new_change
+  end
+
   def in( arg )
     sing_currency = arg.to_s.gsub( /s$/, '' )
     if @@currencies.has_key? sing_currency
