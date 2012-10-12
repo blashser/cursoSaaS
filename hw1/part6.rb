@@ -157,6 +157,12 @@ else
   puts "Eres un mierda"
 end
 
+if [].palindrome?
+  puts "muy bien"
+else
+  puts "la cagaste"
+end
+
 puts
 if {'casa'=> 35, 'trabajo'=> 20, 'pueblo'=> "me gusta" }.palindrome?
   puts "toma cacho palíndromo"
