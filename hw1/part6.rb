@@ -128,6 +128,32 @@ print "15.yen.in :pesos "
 puts 15.yen.in :pesos
 
 
+palin = [ "Dábale arroz a la zorra el abad.",
+          "¿Acaso hubo búhos acá?",
+          "No lata, no: la totalidad arada dilato talón a talón.",
+          "A man, a plan, a canal: Panama!",
+          "Madam, in Eden I'm Adam" ]
+
+no_palin = [ "there goes the neighborhood" ]
+
+test_string = palin + no_palin
+
+test_string.each do |str|
+  if str.palindrome?
+    puts str + " is a palindrome!"
+  else
+    puts str + " is NOT a palindrome!"
+  end
+end
+
+
+
+if palidrome? "hola"
+  puts "PALINDROMO"
+else
+  puts "NO PALINDROMO"
+end
+
 module Enumerable
   # YOUR CODE HERE
 end
