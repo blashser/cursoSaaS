@@ -13,6 +13,12 @@ class CartesianProduct
       end
     end
   end
+
+  def each
+    product.each do |part|
+      yield part
+    end
+  end
 end
 
 
