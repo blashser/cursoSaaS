@@ -4,8 +4,8 @@ class CartesianProduct
   attr_accessor :product
 
   def initialize( arry1, arry2 )
+    @product = []
     unless arry1.empty? || arry2.empty?
-      @product = []
       arry1.each do |first|
         arry2.each do |second|
           @product << [ first, second ]
@@ -15,7 +15,7 @@ class CartesianProduct
   end
 
   def each
-    product.to_a.each do |part|
+    product.each do |part|
       yield part
     end
   end
