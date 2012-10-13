@@ -103,16 +103,9 @@ end
 module Enumerable
   def palindrome?
     unless self.is_a? Hash
-      counter = 0
-      result  = true
-      self.each do |test|
-        counter+=1
-        if test != self[ -(counter) ]
-          result = false
-          break
-        end
-      end
-      result
+      self.to_a == self.to_a.reverse
+    else
+      true
     end
   end
 end
