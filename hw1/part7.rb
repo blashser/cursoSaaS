@@ -39,3 +39,11 @@ puts bc.product.inspect
 cd = CartesianProduct.new array_largo, array_nulo
 
 puts cd.product.inspect
+
+cd.each { |j| puts j.inspect }
+
+[ ab, bc, cd ].each do |de|
+  de.each do |veras|
+    puts veras.inspect
+  end
+end
