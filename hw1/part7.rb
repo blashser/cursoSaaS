@@ -15,7 +15,7 @@ class CartesianProduct
   end
 
   def each
-    product.each do |part|
+    product.to_a.each do |part|
       yield part
     end
   end
