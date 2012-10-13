@@ -102,7 +102,9 @@ end
 
 module Enumerable
   def palindrome?
-    self == self.reverse if self.respond_to? "reverse"
+    unless self.is_a? Hash
+      self == self.reverse if self.respond_to? "reverse"
+    end
   end
 end
 
